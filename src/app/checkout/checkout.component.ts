@@ -13,7 +13,7 @@ export class CheckoutComponent implements OnInit {
   ngOnInit(): void {
     loadScript({'client-id': 'sb'})
       .then(paypal => {
-        paypal.Buttons().render('#paypal-button-container')
+        paypal.Buttons().render('#paypal-button-container');
       });
   }
 }
