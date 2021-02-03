@@ -7,11 +7,12 @@ import { loadScript } from '@paypal/paypal-js';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent implements OnInit {
+  CLIENT_ID = 'your-client-id';
 
   constructor() { }
 
   ngOnInit(): void {
-    loadScript({'client-id': 'sb'})
+    loadScript({'client-id': this.CLIENT_ID})
       .then(paypal => {
         paypal.Buttons().render('#paypal-button-container');
       });

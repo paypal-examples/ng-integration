@@ -1,8 +1,7 @@
 img {
   border: 1px solid darkgray;
-  margin-bottom: 2em;
 }
 
-h1 {
-  text-align: center;
+.caption {
+  font-size: 11px;
 }
