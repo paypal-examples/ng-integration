@@ -26,7 +26,7 @@ Navigate to [localhost:4200](http://localhost:4200). You should see the app runn
 
 ## How It Works
 
-The JavaScript SDK is imported via [paypal-js](https://github.com/paypal/paypal-js) in _src/Checkout.svelte_ where we set up a div to hold the buttons. Style, payment method, and other options can be specified in `paypal.Buttons()`
+The JavaScript SDK is imported via [paypal-js](https://github.com/paypal/paypal-js) in _src/app/checkout/checkout.component.ts_ where we set up a div to hold the buttons. Style, payment method, and other options can be specified in `paypal.Buttons()`
 
 ## Further help
 
