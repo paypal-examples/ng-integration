@@ -1,27 +1,33 @@
-# NgIntegration
+# Angular 2 App PayPal Integration
+
+A sample app demonstrating the use of [paypal-js](https://github.com/paypal/paypal-js) to add PayPal buttons to a basic Angular app.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
 
-## Development server
+## Get started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Install the dependencies...
 
-## Code scaffolding
+```bash
+cd ng-integration
+npm install
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+...log in to the [developer dashboard](https://www.paypal.com/signin?returnUri=https%3A%2F%2Fdeveloper.paypal.com%2Fdeveloper%2Fapplications) and get your client ID from your default application. Change `const CLIENT_ID = 'your-client-id';` in _src/app/checkout/checkout.component.ts_ so CLIENT_ID matches your sandbox client ID...
 
-## Build
+> If you need help setting up your developer dashboard or finding your client ID, follow the first step in the getting started documentation to [get API credentials](https://developer.paypal.com/docs/business/get-started/#get-api-credentials)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+...then start:
 
-## Running unit tests
+```bash
+npm run start
+```
+Navigate to [localhost:4200](http://localhost:4200). You should see the app running.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## How It Works
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+The JavaScript SDK is imported via [paypal-js](https://github.com/paypal/paypal-js) in _src/Checkout.svelte_ where we set up a div to hold the buttons. Style, payment method, and other options can be specified in `paypal.Buttons()`
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+For more details and configuration options look at [paypal-js usasge](https://github.com/paypal/paypal-js#usage) and the [PayPal JavaScript SDK Complete Reference](https://developer.paypal.com/docs/business/javascript-sdk/javascript-sdk-reference/)
